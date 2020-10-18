@@ -1,9 +1,16 @@
-import Nav from '../nav';
+  
+import React, { ReactNode } from 'react'
+import Navbar from '../navbar';
 
-export default function AppLayout({children}) {
+type Props = {
+  children?: ReactNode
+  title?: string
+}
+
+export default function AppLayout({children}: Props) {
   return (
     <>
-      <Nav />
+      <Navbar fixed={true}/>
       {children}
     </>
   )

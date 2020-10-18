@@ -7,13 +7,13 @@ import {wrapper} from "../store/index"
 import "../styles/index.css"
 
 type Props = {
-  Component: React.Component
-  store: any
+  Component: React.FunctionComponent,
+  pageProps:  any
 }
 
 
 
-const WrappedApp = ({ Component, pageProps }) => {
+const WrappedApp: React.FC<Props> = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
 }
 
