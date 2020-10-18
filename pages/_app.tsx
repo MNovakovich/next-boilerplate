@@ -1,8 +1,20 @@
-import '../styles/index.css'
 
-import type { AppProps /*, AppContext */ } from 'next/app'
+import withRedux from "next-redux-wrapper"
+import App from "next/app"
+import React from "react"
+import { Provider } from "react-redux"
+import {wrapper} from "../store/index"
+import "../styles/index.css"
 
-function MyApp({ Component, pageProps }: AppProps) {
+type Props = {
+  Component: React.Component
+  store: any
+}
+
+
+
+const WrappedApp = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
 }
-export default MyApp
+
+export default wrapper.withRedux(WrappedApp)
