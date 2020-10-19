@@ -11,13 +11,11 @@ type Post = {
   content: string
 }
 const Posts = ({posts}) => {
-   
-  
 
     return (
         <AppLayout>
            
-            {
+             {
                  posts.map((post, index) => {
                     const {title, slug } = post.node;
                     return (
@@ -26,39 +24,16 @@ const Posts = ({posts}) => {
                         </div>
                 )
                 })
-            }
+            } 
         </AppLayout>
     )
 }
 export const getStaticProps = async () => {
-    const query = `{
-        posts(first: 10000) {
-          edges {
-            node {
-              id
-              title
-              slug
-            }
-          }
-        }
-      }
-    `;
-    const headers = { 'Content-Type': 'application/json' }
-    
-    const res = await fetch('http://localhost/nextwp/graphql',{
-        method:'POST',
-        headers,
-        body: JSON.stringify({
-            query
-            }),
-    });
-
-    const data = await res.json();
-    const posts = data.data.posts.edges;
+   const posts = await getAllPostsWithSlug();
     
     return {
       props: {
-        posts
+        posts:posts.edges
       },
     }
   }
