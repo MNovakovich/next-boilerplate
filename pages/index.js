@@ -4,7 +4,6 @@ import AppLayout from '../components/layouts/AppLayout'
 import styles from '../styles/Home.module.css'
 import { useSelector, useDispatch } from 'react-redux';
 import {addCount} from '../store/count/action';
-import Alert from '../components/alert';
 import Avatar from '../components/avatar';
 
 import { getAllPostsWithSlug } from '../lib/api'
@@ -23,7 +22,7 @@ export default function Home() {
   return (
     <AppLayout className={styles.container}>
       <Head>
-  <title>Create Next App </title>
+         <title>Create Next App </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -35,7 +34,7 @@ export default function Home() {
          
         
       </main>
-      <Alert preview={preview} />
+  
       
     </AppLayout>
   )

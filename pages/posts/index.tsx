@@ -20,7 +20,9 @@ const Posts = ({posts}) => {
                     const {title, slug } = post.node;
                     return (
                         <div key={index}> 
-                            <a href={`posts/${slug}`}>{title}</a>
+                            <Link href={`posts/${slug}`}>
+                              <a >{title}</a>
+                            </Link>
                         </div>
                 )
                 })
