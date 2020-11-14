@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Collapse } from 'antd';
+
 import AppLayout from '../../components/layouts/AppLayout'
 
-const { Panel } = Collapse;
+
 
 const text = (
     <p style={{ paddingLeft: 24 }}>
@@ -15,17 +15,7 @@ const text = (
 function PostItem(props) {
     return (
         <AppLayout>
-            <Collapse bordered={false} defaultActiveKey={['1']}>
-                <Panel header="This is panel header 1" key="1">
-                   {text}
-                </Panel>
-                <Panel header="This is panel header 2" key="2">
-                   {text}
-                </Panel>
-                <Panel header="This is panel header 3" key="3">
-                   {text}
-                </Panel>
-            </Collapse>
+           Post ite
         </AppLayout>
     )
 }
