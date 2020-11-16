@@ -12,7 +12,7 @@ function Navbar(props: Props): ReactElement {
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           
         <div className="pl-4 flex items-center">
-          <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
+          <a className="toggleColour text-primary no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
            
             <svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
             <rect fill="#000" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
@@ -30,7 +30,7 @@ function Navbar(props: Props): ReactElement {
         <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
-              <a className="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
+              <a className="btn" href="#">Active</a>
             </li>
             <li className="mr-3">
               <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
